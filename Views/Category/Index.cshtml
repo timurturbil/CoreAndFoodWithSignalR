@@ -1,0 +1,31 @@
+﻿@model List<CoreAndFood.Models.Category>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Category page</h2>
+
+<br />
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>    
+        <th>Category Name</th>   
+        <th>Delete</th>    
+        <th>Update</th> 
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+        <th>@item.CategoryID</th>    
+        <th>@item.CategoryName</th> 
+        <th><a href="/category/UpdateCategoryStatus/@item.CategoryID" class="btn btn-danger">Delete</a></th>    
+        <th><a href="/category/GetCategory/@item.CategoryID" class="btn btn-success">Update</a></th> 
+    </tr>
+        
+    }
+</table>
+<a href="/Category/AddCategory" class="btn btn-primary">New Category</a>
+
+
+

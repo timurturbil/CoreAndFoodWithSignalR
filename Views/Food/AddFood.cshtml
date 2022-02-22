@@ -1,0 +1,46 @@
+﻿@model CoreAndFood.Models.Food
+@{
+    ViewData["Title"] = "AddFood";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<form class="form-group" id="foodForm">
+        <b>Food Name</b>
+        @Html.TextBoxFor(x => x.Name, new {@class = "form-control"})
+        <b>Price</b>
+        @Html.TextBoxFor(x => x.Price, new {@class = "form-control"})
+        <b>Image Url</b>
+        @Html.TextBoxFor(x => x.ImageUrl, new {@class = "form-control"})
+        <b>Stock</b>
+        @Html.TextBoxFor(x => x.Stock, new {@class = "form-control"})
+        <b>Category</b>
+        @Html.DropDownListFor(x => x.CategoryID, (List<SelectListItem>)ViewBag.Values, new {@class = "form-control"})
+        <b>Food Description</b>
+        @Html.TextAreaFor(x => x.Description, new {@class = "form-control"})
+        <br />
+        <button class="btn btn-info" onclick="addFood()">Add Food</button>
+</form>
+<button id="addButton" style="visibility: hidden;">Add Food</button>
+<script src="~/js/signalr/dist/browser/signalr.js"></script>
+<script src="~/js/category.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script type="text/javascript">
+    function addFood() {
+        var data = $("#foodForm").serialize();
+        $.ajax({
+            type: 'POST',
+            url: '/Food/AddFood',
+            contentType: 'application/x-www-form-urlencoded; charset=UTF-8', // when we use .serialize() this generates the data in query string format. this needs the default contentType (default content type is: contentType: 'application/x-www-form-urlencoded; charset=UTF-8') so it is optional, you can remove it
+            data: data,
+            success: function (result) {
+                window.location.href = result.redirectToUrl;
+            },
+            error: function () {
+                alert('Failed to receive the Data');
+                console.log('Failed ');
+            }
+        })
+        document.getElementById("addButton").click();
+
+    }
+
+</script>
