@@ -19,9 +19,9 @@
         <br />
         <button class="btn btn-info" onclick="addFood()">Add Food</button>
 </form>
-<button id="addButton" style="visibility: hidden;">Add Food</button>
+<button id="sendButton" style="visibility: hidden;">Add Food</button>
 <script src="~/js/signalr/dist/browser/signalr.js"></script>
-<script src="~/js/category.js"></script>
+<script src="~/js/chat.js"></script>
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script type="text/javascript">
     function addFood() {
@@ -32,14 +32,14 @@
             contentType: 'application/x-www-form-urlencoded; charset=UTF-8', // when we use .serialize() this generates the data in query string format. this needs the default contentType (default content type is: contentType: 'application/x-www-form-urlencoded; charset=UTF-8') so it is optional, you can remove it
             data: data,
             success: function (result) {
-                window.location.href = result.redirectToUrl;
+                window.location.href = result.redirectUrl;
             },
             error: function () {
                 alert('Failed to receive the Data');
                 console.log('Failed ');
             }
         })
-        document.getElementById("addButton").click();
+        document.getElementById("sendButton").click();
 
     }
 

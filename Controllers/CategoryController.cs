@@ -2,11 +2,10 @@
 using CoreAndFood.Repositories;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using X.PagedList;
 
 namespace CoreAndFood.Controllers
 {
-
+    [Authorize(Roles = "admin1, admin2")]
     public class CategoryController : Controller
     {
         CategoryRepository categoryRepositories = new CategoryRepository();
@@ -27,22 +26,22 @@ namespace CoreAndFood.Controllers
         [HttpPost]
         public IActionResult AddCategory(Category category)
         {
-            if (!ModelState.IsValid)
+            Console.WriteLine($"AddCategory girdi {category.CategoryName} {category.CategoryDescription}");
+            Category category1 = new Category();
+            category1.CategoryName = category.CategoryName;
+            category1.CategoryDescription = category.CategoryDescription;
+            category1.Status = true;
+            categoryRepositories.AddItem(category1);
+            return Json(new
             {
-                return View("AddCategory");
-            }
-            category.Status = true;
-            categoryRepositories.AddItem(category);
-            return Json(new { redirectToUrl = Url.Action("Index", "Category") });
+                redirectUrl = Url.Action("Index", "Category"),
+                isRedirect = true
+            });
         }
 
+        [Authorize(Roles = "admin1")]
         public IActionResult UpdateCategoryStatus(int id)
         {
-            var adminRole = HttpContext.Session.GetString("adminRole");
-            if (adminRole != "A")
-            {
-                return ErrorView();
-            }
             Category selectedCategory = categoryRepositories.GetItem(id);
             selectedCategory.Status = false;
             categoryRepositories.UpdateItem(selectedCategory);

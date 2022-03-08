@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\timur.turbil\\Desktop\\basic\\C-sharp\\CoreAndFood\\CoreAndFood.csproj": {}
+    "C:\\Users\\timur.turbil\\Desktop\\basic\\Cs\\CoreAndFood\\CoreAndFood.csproj": {}
   },
   "projects": {
-    "C:\\Users\\timur.turbil\\Desktop\\basic\\C-sharp\\CoreAndFood\\CoreAndFood.csproj": {
+    "C:\\Users\\timur.turbil\\Desktop\\basic\\Cs\\CoreAndFood\\CoreAndFood.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\timur.turbil\\Desktop\\basic\\C-sharp\\CoreAndFood\\CoreAndFood.csproj",
+        "projectUniqueName": "C:\\Users\\timur.turbil\\Desktop\\basic\\Cs\\CoreAndFood\\CoreAndFood.csproj",
         "projectName": "CoreAndFood",
-        "projectPath": "C:\\Users\\timur.turbil\\Desktop\\basic\\C-sharp\\CoreAndFood\\CoreAndFood.csproj",
+        "projectPath": "C:\\Users\\timur.turbil\\Desktop\\basic\\Cs\\CoreAndFood\\CoreAndFood.csproj",
         "packagesPath": "C:\\Users\\timur.turbil\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\timur.turbil\\Desktop\\basic\\C-sharp\\CoreAndFood\\obj\\",
+        "outputPath": "C:\\Users\\timur.turbil\\Desktop\\basic\\Cs\\CoreAndFood\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\timur.turbil\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -44,6 +44,14 @@
               "target": "Package",
               "version": "[22.0.30, )"
             },
+            "IKVM": {
+              "target": "Package",
+              "version": "[8.1.5717, )"
+            },
+            "KendoUICore": {
+              "target": "Package",
+              "version": "[2022.1.301, )"
+            },
             "Microsoft.AspNetCore.Authentication.Cookies": {
               "target": "Package",
               "version": "[2.2.0, )"
@@ -71,6 +79,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[6.0.1, )"
+            },
+            "Microsoft.Extensions.Logging.Abstractions": {
+              "target": "Package",
+              "version": "[6.0.0, )"
             },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",

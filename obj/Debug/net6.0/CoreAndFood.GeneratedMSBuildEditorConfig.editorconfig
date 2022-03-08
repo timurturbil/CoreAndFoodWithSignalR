@@ -8,69 +8,85 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = CoreAndFood
 build_property.RootNamespace = CoreAndFood
-build_property.ProjectDir = C:\Users\timur.turbil\Desktop\basic\C-sharp\CoreAndFood\
+build_property.ProjectDir = C:\Users\timur.turbil\Desktop\basic\Cs\CoreAndFood\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\timur.turbil\Desktop\basic\C-sharp\CoreAndFood
+build_property.MSBuildProjectDirectory = C:\Users\timur.turbil\Desktop\basic\Cs\CoreAndFood
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/timur.turbil/Desktop/basic/C-sharp/CoreAndFood/Views/Category/AddCategory.cshtml]
+[C:/Users/timur.turbil/Desktop/basic/Cs/CoreAndFood/Views/Account/AccessDenied.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxBY2Nlc3NEZW5pZWQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/timur.turbil/Desktop/basic/Cs/CoreAndFood/Views/Category/AddCategory.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnlcQWRkQ2F0ZWdvcnkuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/timur.turbil/Desktop/basic/C-sharp/CoreAndFood/Views/Category/ErrorView.cshtml]
+[C:/Users/timur.turbil/Desktop/basic/Cs/CoreAndFood/Views/Category/ErrorView.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnlcRXJyb3JWaWV3LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/timur.turbil/Desktop/basic/C-sharp/CoreAndFood/Views/Category/GetCategory.cshtml]
+[C:/Users/timur.turbil/Desktop/basic/Cs/CoreAndFood/Views/Category/GetCategory.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnlcR2V0Q2F0ZWdvcnkuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/timur.turbil/Desktop/basic/C-sharp/CoreAndFood/Views/Category/Index.cshtml]
+[C:/Users/timur.turbil/Desktop/basic/Cs/CoreAndFood/Views/Category/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnlcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/timur.turbil/Desktop/basic/C-sharp/CoreAndFood/Views/Chart/Index.cshtml]
+[C:/Users/timur.turbil/Desktop/basic/Cs/CoreAndFood/Views/Chart/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2hhcnRcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/timur.turbil/Desktop/basic/C-sharp/CoreAndFood/Views/Chart/Index2.cshtml]
+[C:/Users/timur.turbil/Desktop/basic/Cs/CoreAndFood/Views/Chart/Index2.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2hhcnRcSW5kZXgyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/timur.turbil/Desktop/basic/C-sharp/CoreAndFood/Views/Chart/Statistics.cshtml]
+[C:/Users/timur.turbil/Desktop/basic/Cs/CoreAndFood/Views/Chart/Statistics.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2hhcnRcU3RhdGlzdGljcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/timur.turbil/Desktop/basic/C-sharp/CoreAndFood/Views/Food/AddFood.cshtml]
+[C:/Users/timur.turbil/Desktop/basic/Cs/CoreAndFood/Views/FileUpload/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmlsZVVwbG9hZFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/timur.turbil/Desktop/basic/Cs/CoreAndFood/Views/Food/AddFood.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRm9vZFxBZGRGb29kLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/timur.turbil/Desktop/basic/C-sharp/CoreAndFood/Views/Food/Index.cshtml]
+[C:/Users/timur.turbil/Desktop/basic/Cs/CoreAndFood/Views/Food/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRm9vZFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/timur.turbil/Desktop/basic/C-sharp/CoreAndFood/Views/Home/Components/GetCategoryList/Default.cshtml]
+[C:/Users/timur.turbil/Desktop/basic/Cs/CoreAndFood/Views/Home/Components/GetCategoryList/Default.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDb21wb25lbnRzXEdldENhdGVnb3J5TGlzdFxEZWZhdWx0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/timur.turbil/Desktop/basic/C-sharp/CoreAndFood/Views/Home/Components/GetFoodList/Default.cshtml]
+[C:/Users/timur.turbil/Desktop/basic/Cs/CoreAndFood/Views/Home/Components/GetFoodList/Default.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDb21wb25lbnRzXEdldEZvb2RMaXN0XERlZmF1bHQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/timur.turbil/Desktop/basic/C-sharp/CoreAndFood/Views/Home/Index.cshtml]
+[C:/Users/timur.turbil/Desktop/basic/Cs/CoreAndFood/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/timur.turbil/Desktop/basic/C-sharp/CoreAndFood/Views/Login/Index.cshtml]
+[C:/Users/timur.turbil/Desktop/basic/Cs/CoreAndFood/Views/Kendo/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS2VuZG9cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/timur.turbil/Desktop/basic/Cs/CoreAndFood/Views/Login/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/timur.turbil/Desktop/basic/C-sharp/CoreAndFood/Views/Shared/_Layout.cshtml]
+[C:/Users/timur.turbil/Desktop/basic/Cs/CoreAndFood/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/timur.turbil/Desktop/basic/C-sharp/CoreAndFood/Views/Shared/_NewLayout.cshtml]
+[C:/Users/timur.turbil/Desktop/basic/Cs/CoreAndFood/Views/Shared/_NewLayout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9OZXdMYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/timur.turbil/Desktop/basic/Cs/CoreAndFood/Views/SignalR/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2lnbmFsUlxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

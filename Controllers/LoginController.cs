@@ -1,7 +1,6 @@
 ﻿using CoreAndFood.Models;
 using EO.WebBrowser.DOM;
 using Microsoft.AspNetCore.Authentication;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;
 
@@ -9,31 +8,42 @@ namespace CoreAndFood.Controllers
 {
     public class LoginController : Controller
     {
+        Context c = new Context();
 
-        [AllowAnonymous]
         public IActionResult Index()
         {
             return View();
         }
 
-
-        [AllowAnonymous]
         [HttpPost]
-        public async Task<IActionResult> Index(AdminModel admin)
+        public async Task<IActionResult> Index(User user)
         {
-            Context c = new Context();
+            if (string.IsNullOrEmpty(user.UserName) && string.IsNullOrEmpty(user.UserPassword)) return RedirectToAction("Login");
 
-            var datavalue = c.Admins.FirstOrDefault(x=>x.AdminName == admin.AdminName && x.AdminPassword == admin.AdminPassword);
+            var datavalue = c.Users.FirstOrDefault(x => x.UserName == user.UserName && x.UserPassword == user.UserPassword);
+
             if (datavalue == null) return View("Error");
-            var claims = new List<Claim>
-            {
-                new Claim(ClaimTypes.Name, admin.AdminName!)
-            };
-            var userIdentity = new ClaimsIdentity(claims, "Login");
-            ClaimsPrincipal principal = new ClaimsPrincipal(userIdentity);
+
+            ClaimsIdentity identity = null;
+
+            identity = new ClaimsIdentity(new[]
+                {
+                new Claim(ClaimTypes.Name, datavalue.UserName!),
+                new Claim(ClaimTypes.Role, datavalue.UserRole!)
+                }, "Login");
+
+            ClaimsPrincipal principal = new(identity);
+
             await HttpContext.SignInAsync(principal);
-            HttpContext.Session.SetString("adminRole", datavalue.AdminRole);
-            return RedirectToAction("Index", "Category");
+            if (datavalue.UserRole == "user")
+            {
+                return RedirectToAction("Index", "Home");
+            }
+            else
+            {
+                return RedirectToAction("Index", "Category");
+            }
+
         }
 
         [HttpGet]
@@ -42,5 +52,23 @@ namespace CoreAndFood.Controllers
             await HttpContext.SignOutAsync();
             return RedirectToAction("Index", "Login");
         }
+
+        //public string GetCookie(string key)
+        //{
+        //    return Request.Cookies[key];
+        //} 
+        //public void SetCookie(string key, string value, int? expireTime)
+        //{
+        //    CookieOptions option = new CookieOptions();
+        //    if (expireTime.HasValue)
+        //        option.Expires = DateTime.Now.AddMinutes(expireTime.Value);
+        //    else
+        //        option.Expires = DateTime.Now.AddMilliseconds(10);
+        //    Response.Cookies.Append(key, value, option);
+        //}
+        //public void RemoveCookie(string key)
+        //{
+        //    Response.Cookies.Delete(key);
+        //}
     }
 }

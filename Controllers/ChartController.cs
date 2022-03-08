@@ -1,10 +1,12 @@
 ﻿using CoreAndFood.Models;
 using CoreAndFood.Repositories;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using static CoreAndFood.Controllers.CategoryController;
 
 namespace CoreAndFood.Controllers
 {
+    [Authorize(Roles = "admin1, admin2")]
     public class ChartController : Controller
     {
         Context c = new Context();
@@ -62,6 +64,7 @@ namespace CoreAndFood.Controllers
             }
             return filteredCategories.Count;
         }
+
         public Dictionary<string, dynamic> GetStatisticsData()
         {
             Dictionary<string, dynamic> myDictionary = new Dictionary<string, dynamic>();

@@ -1,12 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "olOzWkmBBsujI8yW0WXTwcegMsQPM5+Yw7C6FAqlTuAfh2l7JnjmOHoIkBsb6/MX8DEJLHV11wOKn50+riYebA==",
+  "dgSpecHash": "fBwykZ2uoWgFtgT0M3U3A9F89DTAeh3XsJKKqv9MSOU2L6LOS6E26jcJ7VZqPlqbAJiJ5a9JGIBDlHSOIzg/xw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\timur.turbil\\Desktop\\basic\\C-sharp\\CoreAndFood\\CoreAndFood.csproj",
+  "projectFilePath": "C:\\Users\\timur.turbil\\Desktop\\basic\\Cs\\CoreAndFood\\CoreAndFood.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\timur.turbil\\.nuget\\packages\\eo.webbrowser\\22.0.30\\eo.webbrowser.22.0.30.nupkg.sha512",
     "C:\\Users\\timur.turbil\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
+    "C:\\Users\\timur.turbil\\.nuget\\packages\\ikvm\\8.1.5717\\ikvm.8.1.5717.nupkg.sha512",
     "C:\\Users\\timur.turbil\\.nuget\\packages\\jetbrains.annotations\\2021.1.0\\jetbrains.annotations.2021.1.0.nupkg.sha512",
+    "C:\\Users\\timur.turbil\\.nuget\\packages\\jquery\\1.9.1\\jquery.1.9.1.nupkg.sha512",
+    "C:\\Users\\timur.turbil\\.nuget\\packages\\kendouicore\\2022.1.301\\kendouicore.2022.1.301.nupkg.sha512",
     "C:\\Users\\timur.turbil\\.nuget\\packages\\messagepack\\2.1.152\\messagepack.2.1.152.nupkg.sha512",
     "C:\\Users\\timur.turbil\\.nuget\\packages\\messagepack.annotations\\2.1.152\\messagepack.annotations.2.1.152.nupkg.sha512",
     "C:\\Users\\timur.turbil\\.nuget\\packages\\messagepackanalyzer\\2.1.152\\messagepackanalyzer.2.1.152.nupkg.sha512",
@@ -209,6 +212,16 @@
       "warningLevel": 1,
       "message": "Package 'EO.WebBrowser 22.0.30' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net6.0'. This package may not be fully compatible with your project.",
       "libraryId": "EO.WebBrowser",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'IKVM 8.1.5717' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net6.0'. This package may not be fully compatible with your project.",
+      "libraryId": "IKVM",
       "targetGraphs": [
         "net6.0"
       ]

@@ -7,22 +7,24 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
+builder.Services.AddSignalR();
+//builder.Services.AddKendo();
 builder.Services.AddAuthentication(
     CookieAuthenticationDefaults.AuthenticationScheme).AddCookie(x =>
     {
         x.LoginPath = "/login/index";
     });
-builder.Services.AddMvc(config =>
-{
-    var policy = new AuthorizationPolicyBuilder()
-    .RequireAuthenticatedUser()
-    .Build();
-    config.Filters.Add(new AuthorizeFilter(policy));
-});
+//builder.Services.AddMvc(config =>
+//{
+//    var policy = new AuthorizationPolicyBuilder()
+//    .RequireAuthenticatedUser()
+//    .Build();
+//    config.Filters.Add(new AuthorizeFilter(policy));
+//});
 
 builder.Services.AddSession();
 builder.Services.AddDistributedMemoryCache();
-builder.Services.AddSignalR();
+
 
 var app = builder.Build();
 
@@ -38,17 +40,18 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
-
-app.UseAuthorization();
+app.UseCookiePolicy();
 app.UseAuthentication();
+app.UseAuthorization();
+
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    pattern: "{controller=Login}/{action=Index}/{id?}");
 
 app.UseSession();
-app.MapHub<CategoryHub>("/categoryHub");
-
+//app.MapHub<CategoryHub>("/categoryHub");
+app.MapHub<ChatHub>("/chatHub");
 app.MapRazorPages();
 
 app.Run();

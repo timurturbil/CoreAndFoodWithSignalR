@@ -1,11 +1,13 @@
 ﻿using CoreAndFood.Models;
 using CoreAndFood.Repositories;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using X.PagedList;
 
 namespace CoreAndFood.Controllers
 {
+    [Authorize(Roles = "admin1, admin2")]
     public class FoodController : Controller
     {
         FoodRepository foodRepositories = new FoodRepository();
@@ -34,7 +36,7 @@ namespace CoreAndFood.Controllers
         public IActionResult AddFood(Food food)
         {
             foodRepositories.AddItem(food);
-            return Json(new { redirectToUrl = Url.Action("Index", "Food") });
+            return Json(new { redirectUrl = Url.Action("Index", "Food") });
         }
 
         public IActionResult DeleteFood(int id)
