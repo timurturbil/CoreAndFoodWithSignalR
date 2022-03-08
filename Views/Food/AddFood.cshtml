@@ -19,10 +19,9 @@
         <br />
         <button class="btn btn-info" onclick="addFood()">Add Food</button>
 </form>
-<button id="sendButton" style="visibility: hidden;">Add Food</button>
-<script src="~/js/signalr/dist/browser/signalr.js"></script>
-<script src="~/js/chat.js"></script>
-<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+<input type="button" id="sendButton" style="visibility: hidden;" value="Send Message" />
+
 <script type="text/javascript">
     function addFood() {
         var data = $("#foodForm").serialize();

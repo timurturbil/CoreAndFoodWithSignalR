@@ -26,17 +26,27 @@ namespace CoreAndFood.Controllers
         [HttpPost]
         public IActionResult AddCategory(Category category)
         {
-            Console.WriteLine($"AddCategory girdi {category.CategoryName} {category.CategoryDescription}");
-            Category category1 = new Category();
-            category1.CategoryName = category.CategoryName;
-            category1.CategoryDescription = category.CategoryDescription;
-            category1.Status = true;
-            categoryRepositories.AddItem(category1);
-            return Json(new
+            try
             {
-                redirectUrl = Url.Action("Index", "Category"),
-                isRedirect = true
-            });
+                Category category1 = new Category();
+                category1.CategoryName = category.CategoryName;
+                category1.CategoryDescription = category.CategoryDescription;
+                category1.Status = true;
+                categoryRepositories.AddItem(category1);
+                return Json(new
+                {
+                    redirectUrl = Url.Action("Index", "Category"),
+                    isRedirect = true
+                });
+            }
+            catch (Exception ex)
+            {
+                return Json(new
+                {
+                    error = ex,
+                    isRedirect = false
+                });
+            }
         }
 
         [Authorize(Roles = "admin1")]

@@ -1,9 +1,10 @@
 ﻿@page
 @model CoreAndFood.Models.Category
-@*@{
+@{
     //ViewData["Title"] = "AddCategory";
     Layout = "~/Views/Shared/_Layout.cshtml";
-    }*@
+}
+
 <form class="form-group" id="categoryForm">
     <b>Category Name</b>
     @Html.TextBoxFor(x => x.CategoryName, new {@class = "form-control"})
@@ -15,9 +16,8 @@
     <button class="btn btn-info" onclick="addCategory()">Add Category</button>
 </form>
 
-
 <input type="button" id="sendButton" style="visibility: hidden;" value="Send Message" />
-<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
 <script type="text/javascript">
     function addCategory() {
         var data = $("#categoryForm").serialize();
@@ -29,6 +29,8 @@
             success: function (json) {
                 if (json.isRedirect) {
                     window.location.href = json.redirectUrl;
+                }else{
+                    alert(json.error)
                 }
             },
             error: function () {
@@ -39,5 +41,3 @@
         document.getElementById("sendButton").click();
     }
 </script>
-<script src="~/js/signalr/dist/browser/signalr.js"></script>
-<script src="~/js/chat.js"></script>
