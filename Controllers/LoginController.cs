@@ -35,14 +35,7 @@ namespace CoreAndFood.Controllers
             ClaimsPrincipal principal = new(identity);
 
             await HttpContext.SignInAsync(principal);
-            if (datavalue.UserRole == "user")
-            {
-                return RedirectToAction("Index", "Home");
-            }
-            else
-            {
-                return RedirectToAction("Index", "Category");
-            }
+            return RedirectToAction("Index", "Home");
 
         }
 

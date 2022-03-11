@@ -7,7 +7,7 @@ using X.PagedList;
 
 namespace CoreAndFood.Controllers
 {
-    [Authorize(Roles = "admin1, admin2")]
+    [Authorize(Roles = "admin1, admin2, admin3")]
     public class FoodController : Controller
     {
         FoodRepository foodRepositories = new FoodRepository();

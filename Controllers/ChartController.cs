@@ -6,7 +6,7 @@ using static CoreAndFood.Controllers.CategoryController;
 
 namespace CoreAndFood.Controllers
 {
-    [Authorize(Roles = "admin1, admin2")]
+    [Authorize(Roles = "admin1, admin2, admin3")]
     public class ChartController : Controller
     {
         Context c = new Context();

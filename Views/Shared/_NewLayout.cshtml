@@ -68,6 +68,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <div class="mega-dropdown-menu">
                         <div class="w3ls_vegetables">
                             <ul class="dropdown-menu drp-mnu">
+                                @if (User.IsInRole("admin1") || User.IsInRole("admin2"))
+                               {
+                                   <li><a href="/Category/Index">Admin</a></li>
+                               }
                                 <li><a href="/Login/LogOut">LogOut</a></li>
                             </ul>
                         </div>

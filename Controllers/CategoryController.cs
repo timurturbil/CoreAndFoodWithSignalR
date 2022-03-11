@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace CoreAndFood.Controllers
 {
-    [Authorize(Roles = "admin1, admin2")]
+    [Authorize(Roles = "admin1, admin2, admin3")]
     public class CategoryController : Controller
     {
         CategoryRepository categoryRepositories = new CategoryRepository();
@@ -56,7 +56,6 @@ namespace CoreAndFood.Controllers
             selectedCategory.Status = false;
             categoryRepositories.UpdateItem(selectedCategory);
             return RedirectToAction("Index");
-
         }
 
         public IActionResult GetCategory(int id)

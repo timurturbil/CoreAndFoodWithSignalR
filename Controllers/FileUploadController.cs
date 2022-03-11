@@ -4,7 +4,7 @@ using Microsoft.Extensions.Logging;
 
 namespace CoreAndFood.Controllers
 {
-    [Authorize(Roles = "admin1, admin2")]
+    [Authorize(Roles = "admin1, admin2, admin3")]
     public class FileUploadController : Controller
     {
         public IActionResult Index()
